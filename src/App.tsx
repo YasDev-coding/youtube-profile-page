@@ -1,9 +1,12 @@
 import { ThemeProvider } from "@/components/theme-provider";
+import Profile from "./components/Profile";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <div className="p-10"></div>
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <main>
+        <Profile />
+      </main>
     </ThemeProvider>
   );
 }
