@@ -1,18 +1,20 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button, buttonVariants } from "./ui/button";
+
 import { cn } from "@/lib/utils";
-import Tabs from "./Tabs";
+import ProfileTabs from "./ProfileTabs";
+import { ModeToggle } from "./mode-toggle";
 
 const Profile = () => {
   return (
-    <div>
+    <div className="space-y-4">
       <img
         src="https://via.assets.so/img.jpg?w=1500&h=400"
         alt="Profile Banner"
         className="w-full object-cover"
       />
       <section className="flex items-center gap-5 p-4">
-        <Avatar className="h-auto w-44 border-2 border-foreground">
+        <Avatar className="h-auto w-44">
           <AvatarImage src="https://avatars.githubusercontent.com/u/88037615?v=4" />
           <AvatarFallback>YA</AvatarFallback>
         </Avatar>
@@ -34,10 +36,10 @@ const Profile = () => {
             <a href="https://t.me/Yasseen_AR_WebDev">Contact Me</a>
           </Button>
         </div>
+        <ModeToggle />
       </section>
-      <section>
-        <Tabs />
-      </section>
+
+      <ProfileTabs />
     </div>
   );
 };
